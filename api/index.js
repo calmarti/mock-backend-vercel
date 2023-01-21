@@ -10,7 +10,7 @@ var cors = require('cors');
 
 //funciona en local 
 //TODO: vercel no encuentra el punto de entrada (404), research this
-
+//TODO: reemplazar objeto build por tema de functions (ver docs de vercel)
 
 var app = express();
 
