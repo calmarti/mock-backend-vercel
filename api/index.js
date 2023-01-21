@@ -1,17 +1,14 @@
 var express = require("express");
-// var createError = require("http-errors");
-// var path = require("path");
-// var cookieParser = require("cookie-parser");
-// var logger = require("morgan");
-// require("dotenv").config();
-// require("./lib/connectMongoose");
-// var cors = require('cors');
+var createError = require("http-errors");
+var path = require("path");
+var cookieParser = require("cookie-parser");
+var logger = require("morgan");
+require("dotenv").config();
+require("../lib/connectMongoose");
+var cors = require('cors');
 
 // console.log(process.env);
 
-//funciona en local 
-//TODO: vercel no encuentra el punto de entrada (404), research this
-//TODO: reemplazar objeto build por tema de functions (ver docs de vercel)
 
 var app = express();
 
@@ -25,12 +22,12 @@ app.listen(process.env.PORT || 3000, () => {
 // app.set("view engine", "ejs");
 
 
-// app.use(cors());
-// app.use(logger("dev"));
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
-// app.use(express.static(path.join(__dirname, "public")));
+app.use(cors());
+app.use(logger("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
 
 
 app.get("/", (req,res)=> {
@@ -39,8 +36,8 @@ app.get("/", (req,res)=> {
 
 //rutas del api
 
-// app.use("/apiv1/items", require("./routes/items"));
-// app.use("/apiv1/fields", require("./routes/fields"));
+app.use("/apiv1/items", require("../routes/items"));
+app.use("/apiv1/fields", require("../routes/fields"));
 
 
 // catch 404 and forward to error handler
