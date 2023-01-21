@@ -5,10 +5,12 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 require("dotenv").config();
 require("./lib/connectMongoose");
-
 var cors = require('cors');
-
 // console.log(process.env);
+
+//funciona en local 
+//TODO: vercel no encuentra el punto de entrada (404), research this
+
 
 var app = express();
 
