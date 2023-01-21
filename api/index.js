@@ -40,31 +40,31 @@ app.use("/apiv1/fields", require("./routes/fields"));
 
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
-});
+// app.use(function (req, res, next) {
+//   next(createError(404));
+// });
 
 // error handler
-app.use(function (err, req, res, next) {
+// app.use(function (err, req, res, next) {
   // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get("env") === "development" ? err : {};
+  // res.locals.message = err.message;
+  // res.locals.error = req.app.get("env") === "development" ? err : {};
 
-  res.status(err.status || 500);
+  // res.status(err.status || 500);
   
   // if it's an api call render the error json 
-  if (req.originalUrl.startsWith("/api")) {
-    res.json({ error: err.message });
-    return;
-  }
+  // if (req.originalUrl.startsWith("/api")) {
+  //   res.json({ error: err.message });
+  //   return;
+  // }
   // if is a browser call render the error view
-  res.render("error");
+  // res.render("error");
   
   //  else {
   //   res.render("error");
   // }
 
-});
+// });
 
 
 
