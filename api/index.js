@@ -4,7 +4,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 require("dotenv").config();
-require("../lib/connectMongoose");
+// require("../lib/connectMongoose");
 var cors = require('cors');
 
 // console.log(process.env);
@@ -36,8 +36,8 @@ app.get("/api", (req,res)=> {
 
 //rutas del api
 
-app.use("/apiv1/items", require("../routes/items"));
-app.use("/apiv1/fields", require("../routes/fields"));
+// app.use("/apiv1/items", require("../routes/items"));
+// app.use("/apiv1/fields", require("../routes/fields"));
 
 
 // catch 404 and forward to error handler
