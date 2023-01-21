@@ -3,8 +3,8 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-require("./api/lib/node_modules/dotenv/lib/main").config();
-require("./api/lib/connectMongoose");
+require("dotenv").config();
+require("./lib/connectMongoose");
 
 var cors = require('cors');
 

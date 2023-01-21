@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Item = require("../api/lib/models/Item");
+const Item = require("../models/Item");
 
 //rutas que devuelven array de valores posibles de los distintos campos
 router.get("/:field", async (req, res, next) => {
