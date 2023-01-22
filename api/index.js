@@ -22,7 +22,6 @@ app.listen(process.env.PORT || 3000, () => {
 // app.set("view engine", "ejs");
 
 
-
 app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
