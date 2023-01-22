@@ -1,6 +1,6 @@
 { "builds": [
     {
-        "src": "/api/index.js",
+        "src": "/",
         "use": "@vercel/node"
     }],
         "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
