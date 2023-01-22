@@ -31,7 +31,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 
-app.get("/", (req,res)=> {
+app.get("/api", (req,res)=> {
     res.send('Trofiplast backend succesfully deployed...');  
 
   })
