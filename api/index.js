@@ -30,9 +30,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 
+app.get("/", (req,res)=> {
+  res.send('Trofiplast backend succesfully deployed...');  
+})
+
 app.get("/api", (req,res)=> {
     res.send('Trofiplast backend succesfully deployed...');  
-
   })
 
 //rutas del api
